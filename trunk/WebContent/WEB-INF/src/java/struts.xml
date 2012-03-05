@@ -24,6 +24,11 @@
 			<result name="success">/jsp/CompactHeader.jsp</result>
 			<result name="input">/jsp/CompactHeader.jsp</result>
 		</action>
+		
+		<action name="addcompactheader22">
+			<result name="success">/jsp/CompactHeader.jsp</result>
+			<result name="input">/jsp/CompactHeader.jsp</result>
+		</action>
 
 
 	</package>
