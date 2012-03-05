@@ -20,7 +20,7 @@
 			<result name="success" type="redirectAction">homepage</result>
 		</action>
 
-		<action name="addcompactheader">
+		<action name="addcompactheader" class="doc.Login">
 			<result name="success">/jsp/CompactHeader.jsp</result>
 			<result name="input">/jsp/CompactHeader.jsp</result>
 		</action>
