@@ -20,7 +20,7 @@
 			<result name="success" type="redirectAction">homepage</result>
 		</action>
 		
-		<action name="vidMod" class="doc.Register">
+		<action name="vidMod2tempdata" class="doc.Register">
 			<result name="error">/jsp/Login.jsp</result>
 			<result name="success" type="redirectAction">homepage</result>
 		</action>
