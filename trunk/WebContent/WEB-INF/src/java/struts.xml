@@ -20,6 +20,11 @@
 			<result name="success" type="redirectAction">homepage</result>
 		</action>
 		
+		<action name="vidMod" class="doc.Register">
+			<result name="error">/jsp/Login.jsp</result>
+			<result name="success" type="redirectAction">homepage</result>
+		</action>
+		
 		<action name="addcompactheader">
 			<result name="success">/jsp/CompactHeader.jsp</result>
 			<result name="input">/jsp/CompactHeader.jsp</result>
