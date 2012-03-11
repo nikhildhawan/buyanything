@@ -10,23 +10,40 @@ import myutil.*;
 
 public class DAL_Search 
 {
-	static void searchProducts(String productNameToSearch)
+	public static void searchProducts(String productNameToSearch)
 	{
 		ArrayList<Product> listProducts = new ArrayList<Product>();
 		String sqlQuery;
 		ResultSet rs=null;
-		sqlQuery="select * from local_sell_request where product like %'"+ productNameToSearch +"'%";
+		sqlQuery="select * from local_sell_request where product_name like '%"+ productNameToSearch +"%'";
+		System.out.println(sqlQuery);
 		try {
 			rs=Query.select(sqlQuery);
 			while(rs.next())
 			{
 				Product objPrd=new Product();
-				objPrd.
-				
+				objPrd.product_name=rs.getString("product_name");
+				System.out.println(rs.getString("product_name"));
+				listProducts.add(objPrd);
 			}
-		} catch (SQLException e) {
+		} 
+		catch (SQLException e) 
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		finally
+		{
+			
+			try
+			{
+				rs.close();
+			}
+			catch (SQLException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	

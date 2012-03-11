@@ -2,8 +2,7 @@ package vo;
 
 public class Product 
 {
-	String product_name;
-	int category,quantity,seller;
-	float cost;
-
+	public String product_name;
+	public int sell_request_id,category,quantity,seller;
+	public float cost;
 }
