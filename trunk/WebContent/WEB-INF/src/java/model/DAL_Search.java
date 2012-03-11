@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import vo.Product;
-import myutil.*;
+import util.*;
 
 public class DAL_Search 
 {
