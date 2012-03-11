@@ -14,7 +14,6 @@
 <!-- 			 -->
 <!-- 		</global-results> -->
 
-
 		<action name="sayhello"  class="doc.BLL_Login">
 			<result name="error">/jsp/Login.jsp</result>
 			<result name="success" type="redirectAction">homepage</result>
@@ -26,8 +25,8 @@
 		</action>
 		
 		<action name="search" class="doc.BLL_Search">
-			<result name="success">/jsp/SearchByCategory.jsp</result>
-			<result name="input">/jsp/Error.jsp</result>
+			<result name="category">/jsp/SearchByCategory.jsp</result>
+			<result name="cost">/jsp/SearchByCost.jsp</result>
 		</action>
 
 

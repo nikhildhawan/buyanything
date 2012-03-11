@@ -186,8 +186,7 @@
 						<div class="navbar">
 							<ul>
 <li>
-							 <a href="/buy_anything/jsp/Login.jsp">Login</a> <span
-									class="divider"> | </span> <a
+							 <a href="/buy_anything/jsp/Login.jsp">Login</a> <span class="divider"> | </span> <a
 									href="/buy_anything/jsp/Register.jsp"
 									style="margin-left: 0; padding-left: 0;">Signup</a>
 								</li>
