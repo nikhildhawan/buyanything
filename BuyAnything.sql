@@ -3,7 +3,7 @@ use buy_anything;
 
 create table user(user_id integer auto_increment, user_name varchar(50), password varchar(50), description varchar(200), primary key(user_id));
 
-create table category(category_id integer auto_increment, description varchar(200), primary key (category_id));
+create table category(category_id integer auto_increment, category_name varchar(200), description varchar(200), primary key (category_id));
 
 /*create table product(product_id integer auto_increment, product_name varchar(200), category integer, description varchar(200), primary key(product_id), foreign key(category) references category(category_id));
 
