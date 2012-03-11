@@ -15,7 +15,7 @@
   
   
   <welcome-file-list>
-    <welcome-file>/jsp/Login.jsp</welcome-file>
+    <welcome-file>/jsp/login.jsp</welcome-file>
   </welcome-file-list>
 
 
