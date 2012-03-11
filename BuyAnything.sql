@@ -1,3 +1,4 @@
+drop database if exists buy_anything;
 create database buy_anything;
 use buy_anything;
 
