@@ -3,7 +3,7 @@ package doc;
 import java.sql.*;
 import java.util.Map;
 
-import myutil.*;
+import util.*;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
