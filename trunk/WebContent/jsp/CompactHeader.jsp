@@ -180,8 +180,8 @@
 					<div class="content clearfix">
 						<div class="logo">
 							<a href="homepage"><img id="logo"
-								border="0" src="/buy_anything/media/images/logo-small.png"
-								alt="sendmefirst" width="200" height="42" /> </a>
+								border="0" src="/buy_anything/media/images/logo.gif"
+								alt="sendmefirst" width="200" height="36" /> </a>
 						</div>
 						<div class="navbar">
 							<ul>
@@ -210,7 +210,7 @@
 										| </span> <a href="logout.action"
 									style="margin-left: 0; padding-left: 0;">Logout</a> <% } 
 						else 
-						{ %> <a href="/Struts2Example/jsp/Login.jsp">Login</a> <span
+						{ %> <a href="/buy_anything/jsp/Login.jsp">Login</a> <span
 									class="divider"> | </span> <a
 									href="/buy_anything/jsp/Register.jsp"
 									style="margin-left: 0; padding-left: 0;">Signup</a> <%	} %>

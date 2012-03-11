@@ -8,7 +8,7 @@
 <link rel="stylesheet"
 	href="/buy_anything/media/css/screen.css?v=12201316" type="text/css"
 	media="screen, projection">
-<title>SendMeFirst.com | SignUp</title>
+<title>BuyAnything.com | SignUp</title>
 <style type="text/css">
 td {	padding: 6px;}
 

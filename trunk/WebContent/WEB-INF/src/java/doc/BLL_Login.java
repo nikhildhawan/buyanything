@@ -8,7 +8,7 @@ import myutil.*;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class Login extends ActionSupport
+public class BLL_Login extends ActionSupport
 {
 	private String message, username, password;
 
@@ -50,7 +50,7 @@ public class Login extends ActionSupport
 			System.out.println(sqlQuery);
 			if (rs.next())
 			{
-				if (rs.getString("Password").compareTo(password) == 0) // checking case for password.
+				if (rs.getString("Password").compareTo(password) == 0) // checking case for password also prevents sql Injections
 				{
 					uid = rs.getInt("user_id");
 					session.put("uid", uid);
@@ -59,7 +59,7 @@ public class Login extends ActionSupport
 				}
 				else
 				{
-					// addActionError("Bhosadi wale sql ka injection jaa ke apni gaand mein laga");
+					
 					addActionError("Invalid Login Details");
 					return ERROR;
 				}
