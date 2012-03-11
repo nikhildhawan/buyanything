@@ -15,19 +15,19 @@
 <!-- 		</global-results> -->
 
 
-		<action name="sayhello" class="doc.Login">
+		<action name="sayhello"  class="doc.BLL_Login">
 			<result name="error">/jsp/Login.jsp</result>
 			<result name="success" type="redirectAction">homepage</result>
 		</action>
 
-		<action name="addcompactheader" class="doc.Login">
+		<action name="addcompactheader">
 			<result name="success">/jsp/CompactHeader.jsp</result>
 			<result name="input">/jsp/CompactHeader.jsp</result>
 		</action>
 		
-		<action name="addcompactheader22">
-			<result name="success">/jsp/CompactHeader.jsp</result>
-			<result name="input">/jsp/CompactHeader.jsp</result>
+		<action name="search" class="doc.BLL_Search">
+			<result name="success">/jsp/SearchByCategory.jsp</result>
+			<result name="input">/jsp/Error.jsp</result>
 		</action>
 
 
