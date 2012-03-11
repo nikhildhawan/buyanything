@@ -1,14 +1,1 @@
-insert into user values(1, "admin", "password", "");
-insert into user values(2, "Rashi", "password", "");
-insert into user values(3, "Ruchi", "password", "");
-insert into user values(4, "Vidyasekar", "password", "");
-insert into user values(5, "Nikhil", "password", "");
-insert into category values(1, "Consumer Electronics", "");
-insert into category values(2, "Clothes", "");
-insert into category values(3, "Furnitures", "");
-insert into category values(4, "Real-Estate", "");
-insert into buy_request values(1, 1, "Samsung Galaxy Tab", "Android tablet phone", "Looking for this phone", 4, 15000.00, 32000.00);
-insert into buy_request values(2, 3, "Table", "Writing table made from teak wood", "Please dont sell me database tables, i want a real table", 4, 2000.00, 13000.00);
-insert into buy_request values(3, 2, "Shirt", "Formal shirt", "Long sleeve good quality shirts needed", 4, 1000.00, 3500.00);
-insert into local_sell_request values(1, 3, "Teak wood made Table", "High quality teak table", 12, "Factory outlet first hand tables", 2, 10000.00);
-insert into local_sell_request values(2, 2, "Scullers Pants", "High quality cotton pants", 31, "Dealer selling good quality formal pants", 5, 1200.00);
+
