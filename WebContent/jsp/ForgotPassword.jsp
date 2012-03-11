@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="/buy_anything/media/css/screen.css" type="text/css" media="screen, projection" />
-<title>Forgot Password</title>
+<title>BuyAnything.com | Forgot Password</title>
 <style type="text/css">
 	body td { padding:6px; }
 	.error { margin-bottom: 0px; }
