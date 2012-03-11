@@ -9,15 +9,51 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class BLL_Search extends ActionSupport
 {
-	String searchtext,searchcriteria;
+	String searchtext,searchby;
+	int mincost,maxcost;
 	ArrayList<Product> searchresultlist;
 	
 	
 	public String execute()
 	{
-		System.out.println(" "+searchcriteria+"is the search criteriia "+searchtext+" is the text");
-		searchresultlist=DAL_Search.searchProducts(searchtext);
-		return SUCCESS;
+		System.out.println(" "+searchby+" is the search criteria, "+searchtext+" " + mincost+", "+maxcost+" is the input");
+		if(searchby!=null && searchby.equalsIgnoreCase("product"))
+		{
+			searchresultlist=DAL_Search.searchProducts(searchtext);
+			return "category";
+		}
+		else if(searchby!=null && searchby.equalsIgnoreCase("cost"))
+		{
+			searchresultlist=DAL_Search.searchProductsByCost(mincost,maxcost);
+			return "cost";
+		}
+		return ERROR;
+		
+		
+	}
+
+	public int getMaxcost() {
+		return maxcost;
+	}
+
+	public void setMaxcost(int maxcost) {
+		this.maxcost = maxcost;
+	}
+
+	public String getSearchby() {
+		return searchby;
+	}
+
+	public void setSearchby(String searchby) {
+		this.searchby = searchby;
+	}
+
+	public int getMincost() {
+		return mincost;
+	}
+
+	public void setMincost(int mincost) {
+		this.mincost = mincost;
 	}
 
 	public String getSearchtext() {
@@ -27,16 +63,6 @@ public class BLL_Search extends ActionSupport
 
 	public void setSearchtext(String searchtext) {
 		this.searchtext = searchtext;
-	}
-
-
-	public String getSearchcriteria() {
-		return searchcriteria;
-	}
-
-
-	public void setSearchcriteria(String searchcriteria) {
-		this.searchcriteria = searchcriteria;
 	}
 
 

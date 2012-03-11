@@ -50,20 +50,22 @@ td.label {
 
 <div class="search-text" >
 	<form class="search-form" action="search" method="post">
-		<label class="search-text">Enter Product to Search</label>
-		<input type="hidden" name="searchby" value="product"/>
-		<input class="search-text" type="text" name="searchtext" label="Search Product" title="Enter Product to search" value="<s:property value="searchtext" />" />
+		<label style="margin-left: 100px;margin-right: auto;width:500px;align:middle">Enter Cost Range to Search Products</label><br/>
+		<input type="hidden" name="searchby" value="cost"/>
+		<s:textfield name="mincost" label="Minimum Cost" ><s:property value="minCost" /></s:textfield>
+		<s:textfield name="maxcost" label="Maximum Cost"><s:property value="maxCost" /></s:textfield>
 		<br><br>
 		<button class="searchbutton1" type="submit" value="Search" title="Search Files">Search</button>
-<!-- 		<button class="searchbutton2" type="submit" value="Search" title="If you are feeling lazy download the first file directly(under construction)">I'm Feeling Lazy</button> -->
+		<button class="searchbutton2" type="submit" value="Search" title="If you are feeling lazy download the first file directly(under construction)">I'm Feeling Lazy</button>
 	</form>
 	<div class="searchresults">
 	<table>
 		<s:iterator value="searchresultlist">
 			<tr>
-				<td class="td-data" style="width: 500px"><s:property value="product_name" /></td>
-				<td class="td-data" style="width: 200px;" align="right"><s:property value="quantity" /></td>
-				<td class="td-data" style="width: 100px" align="right"><s:property value="cost" /></td>
+				<td class="td-data" style="width: 500px;height:50px"><s:property value="product_name" /></td>
+				<td class="td-data" style="width: 200px;height:50px" align="right"><s:property value="category" /></td>
+				<td class="td-data" style="width: 100px;height:50px" align="right"><s:property value="cost" /></td>
+				<td>
 <%-- 					<span class="comment"  >&nbsp;&nbsp;&nbsp;&nbsp;<a href="comment?fileid=<s:property value="fileid" />"><img src="/buy_anything/media/images/commentsmall.png" title="View Comments"></a></span> --%>
 				</td>
 			</tr>
