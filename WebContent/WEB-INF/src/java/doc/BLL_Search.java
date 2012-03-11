@@ -2,23 +2,23 @@ package doc;
 
 import java.util.ArrayList;
 
-import model.*;
+import model.DAL_Search;
+import vo.Product;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BLL_Search extends ActionSupport
 {
 	String searchtext,searchcriteria;
-	ArrayList searchresultlist;
+	ArrayList<Product> searchresultlist;
 	
 	
 	public String execute()
 	{
 		System.out.println(" "+searchcriteria+"is the search criteriia "+searchtext+" is the text");
-		DAL_Search.searchProducts(searchtext);
+		searchresultlist=DAL_Search.searchProducts(searchtext);
 		return SUCCESS;
 	}
-
 
 	public String getSearchtext() {
 		return searchtext;
