@@ -59,11 +59,12 @@ td.label {
 	</form>
 	<div class="searchresults">
 	<table>
-		<s:iterator value="searchfilelist">
+		<s:iterator value="searchresultlist">
 			<tr>
-				<td class="td-data" style="width: 500px"><s:property	value="filename" /></td>
-				<td class="td-data"><a href="downloadfile?fileid=<s:property value="fileid" />">Download</a>
-					<span class="comment"  >&nbsp;&nbsp;&nbsp;&nbsp;<a href="comment?fileid=<s:property value="fileid" />"><img src="/buy_anything/media/images/commentsmall.png" title="View Comments"></a></span>
+				<td class="td-data" style="width: 500px"><s:property value="product_name" /></td>
+				<td class="td-data" style="width: 200px;" align="right"><s:property value="category" /></td>
+				<td class="td-data" style="width: 100px" align="right"><s:property value="cost" /></td>
+<%-- 					<span class="comment"  >&nbsp;&nbsp;&nbsp;&nbsp;<a href="comment?fileid=<s:property value="fileid" />"><img src="/buy_anything/media/images/commentsmall.png" title="View Comments"></a></span> --%>
 				</td>
 			</tr>
 		</s:iterator>
