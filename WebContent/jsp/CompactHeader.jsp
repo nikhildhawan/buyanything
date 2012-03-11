@@ -185,35 +185,11 @@
 						</div>
 						<div class="navbar">
 							<ul>
-								<% if(session.getAttribute("userkey")!=null)
-							{ %>	
-								<li><a class="mydocs-tab" href="homepage?option=changedirectory&currentfid=<%=session.getAttribute("userrootdirid")%>">Home Folder</a></li>
-							<% } %>
-								<!-- 							<li><a href="/partner-program/">Partner Program</a></li> -->
-								<!-- 							<li><a href="/api/">API</a></li> -->
-
-<!-- 								<li class="feedback"> -->
-<!-- 									Feedback dropdown for normal header <a -->
-<!-- 									class="has-subnav" href="javascript:{}">Support</a> -->
-<!-- 									<ul class="subnav"> -->
-<!-- 										<li><a class="email-feedback" href="javascript:{}" onclick="">Send Feedback</a></li> -->
-<!-- 										<li><a href="" >User Forum</a></li> -->
-<!-- 										<li class="no-chatback"><a href="javascript:{}">Chat Offline</a></li> -->
-<!-- 										<li class="chatback" style="display: none;"><a	href="javascript:{}">Live Chat</a></li> -->
-<!-- 									</ul> -->
-<!-- 								</li> -->
-
-								<li>
-									<% if(session.getAttribute("userkey")!=null)
-						{ %> <a class="user" href="homepage"><s:property
-											value="%{#session['userkey']}" /></a> <span class="divider">
-										| </span> <a href="logout.action"
-									style="margin-left: 0; padding-left: 0;">Logout</a> <% } 
-						else 
-						{ %> <a href="/buy_anything/jsp/Login.jsp">Login</a> <span
+<li>
+							 <a href="/buy_anything/jsp/Login.jsp">Login</a> <span
 									class="divider"> | </span> <a
 									href="/buy_anything/jsp/Register.jsp"
-									style="margin-left: 0; padding-left: 0;">Signup</a> <%	} %>
+									style="margin-left: 0; padding-left: 0;">Signup</a>
 								</li>
 							</ul>
 						</div>
