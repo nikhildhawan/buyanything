@@ -32,6 +32,36 @@ public class Query
 			}
 			finally
 			{
+				
+			}
+			return null;
+		}
+	}
+
+	public static int Update(String sqlQuery)
+	{
+		Connection conn;
+		Statement stmt;
+		int result=-1;
+		conn = DB.getConnection();
+		if (conn == null)
+		{
+			return result;
+		}
+		else
+		{
+			try
+			{
+				stmt = conn.createStatement();
+				result = stmt.executeUpdate(sqlQuery);
+				return result;
+			}
+			catch (Exception ex)
+			{
+				ex.printStackTrace();
+			}
+			finally
+			{
 				try
 				{
 					conn.close();
@@ -42,8 +72,7 @@ public class Query
 					e.printStackTrace();
 				}
 			}
-			return null;
+			return -1;
 		}
 	}
-
 }

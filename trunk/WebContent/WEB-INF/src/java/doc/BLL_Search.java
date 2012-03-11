@@ -2,6 +2,8 @@ package doc;
 
 import java.util.ArrayList;
 
+import model.*;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BLL_Search extends ActionSupport
@@ -13,12 +15,7 @@ public class BLL_Search extends ActionSupport
 	public String execute()
 	{
 		System.out.println(" "+searchcriteria+"is the search criteriia "+searchtext+" is the text");
-		
-		
-		
-		
-		
-		
+		DAL_Search.searchProducts(searchtext);
 		return SUCCESS;
 	}
 
