@@ -1,4 +1,4 @@
-drop database if exists buy_anything;
+drop database if exists buy_anything; 
 create database buy_anything;
 use buy_anything;
 
@@ -12,7 +12,7 @@ create table buy_request(buy_request_id integer auto_increment, category integer
 
 create table local_sell_request(sell_request_id integer auto_increment, category integer, product integer, description varchar(200), user integer, cost float, primary key(sell_request_id), foreign key(category) references category(category_id), foreign key(product) references product(product_id), foreign key(user) references user(user_id));*/
 
-create table buy_request(buy_request_id integer auto_increment, category integer, product_name varchar(200), product_description varchar(200), request_description varchar(200), user integer, primary key(buy_request_id), foreign key(category) references category(category_id), foreign key(user) references user(user_id));
+create table buy_request(buy_request_id integer auto_increment, category integer, product_name varchar(200), product_description varchar(200), request_description varchar(200), user integer, min_cost float, max_cost float, primary key(buy_request_id), foreign key(category) references category(category_id), foreign key(user) references user(user_id));
 
 create table local_sell_request(sell_request_id integer auto_increment, category integer, product_name varchar(200), product_description varchar(200), quantity integer, request_description varchar(200), seller integer, cost float, primary key(sell_request_id), foreign key(category) references category(category_id), foreign key(seller) references user(user_id));
 
