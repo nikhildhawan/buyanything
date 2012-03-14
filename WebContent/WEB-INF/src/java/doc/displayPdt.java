@@ -12,14 +12,14 @@ import com.opensymphony.xwork2.ActionContext;
 
 public class displayPdt extends WebappSupport{
 
-	private String addId;
+	private String sell_request_id;
 	private String pdtName;
 	private String pdtPrice;
 	private List pdtDetails = new ArrayList();
 	
 	public String execute(){
 		//System.out.println("pdt id is "+pdtId);
-		pdtDetails = Product.getPdtdetails(addId);
+		pdtDetails = Product.getPdtdetails(sell_request_id);
 		//System.out.println(""+pdtDetails);
 		return "success";
 	}
@@ -32,12 +32,14 @@ public class displayPdt extends WebappSupport{
 		this.pdtDetails = pdtDetails;
 	}
 
-	public String getAddId() {
-		return addId;
+	
+
+	public String getSell_request_id() {
+		return sell_request_id;
 	}
 
-	public void setAddId(String addId) {
-		this.addId = addId;
+	public void setSell_request_id(String sell_request_id) {
+		this.sell_request_id = sell_request_id;
 	}
 
 	public String getPdtName() {
