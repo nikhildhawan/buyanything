@@ -7,14 +7,16 @@
 </head>
 <body>
 <s:actionerror />
+<a href="home" />Home</a>
 <h2>Welcome <s:property value="#session['first_name']" />...!</h2>
+
 <h1 align="center"> BUY ANYTHING </h1>
 <s:form action="select.action" method="post">
 
 <a href="select" />Buy a Item</a><br/>
 <a href="postAd" />Post Advertisement</a><br/>
 <a href="searchName" />Search By Name</a><br/>
-<a href="searchCost" />Search By Cost Range</a>
+<a href="/jsp/SearchByCost" />Search By Cost Range</a>
 
 </s:form>
 
