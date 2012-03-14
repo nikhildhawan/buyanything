@@ -9,7 +9,7 @@ public class ProductVo {
 	private String pdtId;
 	private String category;
 	private String seller;
-	private String addId;
+	private String sell_request_id;
 	private int qty;
 	
 	public ProductVo(String pdtName, String pdtDesc, String pdtPrice,
@@ -52,13 +52,7 @@ public class ProductVo {
 		this.seller = seller;
 	}
 
-	public String getAddId() {
-		return addId;
-	}
 
-	public void setAddId(String addId) {
-		this.addId = addId;
-	}
 
 	public ProductVo(String pdtName, String pdtPrice, String category,
 			String pdtId) {
@@ -84,6 +78,19 @@ public class ProductVo {
 	public void setPdtName(String pdtName) {
 		this.pdtName = pdtName;
 	}
+	
+	
+	public String getSell_request_id() {
+		return sell_request_id;
+	}
+
+
+
+	public void setSell_request_id(String sell_request_id) {
+		this.sell_request_id = sell_request_id;
+	}
+
+
 
 	public String getPdtPrice() {
 		return pdtPrice;
@@ -93,13 +100,13 @@ public class ProductVo {
 		this.pdtPrice = pdtPrice;
 	}
 
-	public ProductVo(String pdtName,String pdtDesc ,String pdtPrice,String seller,String addId) {
+	public ProductVo(String pdtName,String pdtDesc ,String pdtPrice,String seller,String sell_request_id) {
 		super();
 		this.pdtName = pdtName;
 		this.pdtDesc = pdtDesc;
 		this.pdtPrice = pdtPrice;
 		this.seller = seller;
-		this.addId = addId;
+		this.sell_request_id = sell_request_id;
 	}
 
 	public String getPdtId() {
