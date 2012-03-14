@@ -28,6 +28,34 @@
 			<result name="category">/jsp/SearchByCategory.jsp</result>
 			<result name="cost">/jsp/SearchByCost.jsp</result>
 		</action>
+		
+		<action name="searchName">
+        <result >/jsp/SearchByCategory.jsp</result>
+        </action>
+		
+		<action name="login" class="doc.loginAction" method = "checkLogin">
+            <result name="success">/jsp/Welcome.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="select" class="doc.chooseCategory">
+            <result name="success">/jsp/chooseCategory.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="chooseCategory" class="doc.chooseProduct">
+            <result name="success">/jsp/chooseProduct.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="productDetails" class="doc.displayPdt">
+            <result name="success">/jsp/details.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+		
+		<action name="home">
+			<result>/jsp/Welcome.jsp</result>
+		</action>
 
 
 	</package>
