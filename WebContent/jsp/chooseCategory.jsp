@@ -8,6 +8,7 @@
 <body>
 <s:form action="chooseCategory.action" method="post">
 <h1 align="center"> BUY ANYTHING</h1>
+<a href="home" />Home</a>
 <s:label value ="Select Category"/>
 <s:select name="cat_id" list="lstCategory" headerKey="-1" headerValue="--Select Category--"
  align="center"></s:select>
