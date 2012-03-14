@@ -30,9 +30,9 @@ public class Product {
 				String pdtPrice = resultSet.getString("cost");
 				String pdtName = resultSet.getString("product_name");
 				String seller = resultSet.getString("user_name");
-				String addId = resultSet.getString("sell_request_id");
+				String sell_request_id = resultSet.getString("sell_request_id");
 				//System.out.println(""+pdtId);
-				ProductVo pdtVo = new ProductVo(pdtName, pdtDesc, pdtPrice, seller, addId);
+				ProductVo pdtVo = new ProductVo(pdtName, pdtDesc, pdtPrice, seller, sell_request_id);
 				lstPdts.add(pdtVo);
 				//System.out.println(""+resultSet.getFetchSize());
 			}
