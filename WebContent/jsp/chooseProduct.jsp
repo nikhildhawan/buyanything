@@ -8,6 +8,7 @@
 <body>
 <s:form action="chooseProduct.action" method="post">
 <h1 align="center"> BUY ANYTHING</h1>
+<a href="home" />Home</a>
 <s:iterator value="lstProducts">
 <tr>
 
@@ -15,7 +16,7 @@
 <td><s:property value= "pdtDesc"/></td>
 <td><s:property value= "pdtPrice"/></td>
 <td><s:property value = "seller"/></td>
- <td><a href="productDetails?addId=<s:property value= "addId"/>" />Buy This Item</a></td>
+ <td><a href="productDetails?sell_request_id=<s:property value= "sell_request_id"/>" />Buy This Item</a></td>
  </tr>
 </s:iterator>
 </s:form>
