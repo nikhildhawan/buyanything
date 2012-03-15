@@ -29,6 +29,22 @@ public class Category {
 			System.out.println(e);
 		}
 		return category;
+		
 	}
-
+	public static List getCategory(String catgory){
+		List category = new ArrayList();
+		ResultSet resultSet = null;
+		String query = "select category_name from category";
+		Connection connection = DB.getConnection();
+		resultSet = DB.readFromDB(query, connection);
+		try{
+			while(resultSet.next()){
+				category.add(resultSet.getString("category_name"));
+			}
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+		return category;
+	}
 }

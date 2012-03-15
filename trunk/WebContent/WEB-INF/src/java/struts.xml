@@ -14,9 +14,9 @@
 <!-- 			 -->
 <!-- 		</global-results> -->
 
-		<action name="sayhello"  class="doc.BLL_Login">
-			<result name="error">/jsp/Login.jsp</result>
-			<result name="success" type="redirectAction">homepage</result>
+		<action name="login"  class="doc.loginAction">
+			<result name="error">/jsp/login.jsp</result>
+			<result name="success">/jsp/Welcome.jsp</result>
 		</action>
 
 		<action name="addcompactheader">
@@ -33,10 +33,10 @@
         <result >/jsp/SearchByCategory.jsp</result>
         </action>
 		
-		<action name="login" class="doc.loginAction" method = "checkLogin">
+	<!--  <action name="login" class="doc.loginAction" method = "checkLogin">
             <result name="success">/jsp/Welcome.jsp</result>
             <result name="error">/jsp/login.jsp</result>
-        </action>
+        </action>-->
         
         <action name="select" class="doc.chooseCategory">
             <result name="success">/jsp/chooseCategory.jsp</result>
@@ -53,8 +53,28 @@
             <result name="error">/jsp/login.jsp</result>
         </action>
 		
-		<action name="home">
+	<!--  <action name="home">
 			<result>/jsp/Welcome.jsp</result>
+		</action> -->	
+		
+	<action name="displayCat" class="doc.sellerad">
+		<result name="success">/jsp/sellerad.jsp</result>
+		<result name="error">/jsp/success.jsp</result>
+		</action>
+		
+	    <action name="add" class="doc.sellerad">
+		<result name="success">/jsp/dis.jsp</result>
+		<result name="error">/jsp/sellerad.jsp</result>
+		</action> 
+		
+      <action name="buyad" class="doc.buyerad">
+		<result name="success">/jsp/buyerad.jsp</result>
+		<result name="error">/jsp/success.jsp</result>
+		</action>
+   
+    <action name="buyad11" class="doc.buyerad">
+		<result name="success">/jsp/disbuyad.jsp</result>
+		<result name="error">/jsp/success.jsp</result>
 		</action>
 
 
