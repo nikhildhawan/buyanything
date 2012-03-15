@@ -14,7 +14,7 @@ public class Reporter {
 	private PrintWriter writer;
 	private static Hashtable reporters = new Hashtable();
 	private int reportSuffix;
-	private String reportPrefix = "/home/rashi/logger";
+	private String reportPrefix = "/home/nikhil/logger";
 	private String reportType;
 
 	public Reporter(String reportType) {

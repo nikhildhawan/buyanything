@@ -32,6 +32,10 @@
 		<action name="searchName">
         <result >/jsp/SearchByCategory.jsp</result>
         </action>
+        
+        <action name="searchCost">
+        <result >/jsp/SearchByCost.jsp</result>
+        </action>
 		
 	<!--  <action name="login" class="doc.loginAction" method = "checkLogin">
             <result name="success">/jsp/Welcome.jsp</result>

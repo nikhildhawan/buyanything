@@ -55,18 +55,22 @@ td.label {
 		<input class="search-text" type="text" name="searchtext" label="Search Product" title="Enter Product to search" value="<s:property value="searchtext" />" />
 		<br><br>
 		<button class="searchbutton1" type="submit" value="Search" title="Search Files">Search</button>
-<!-- 		<button class="searchbutton2" type="submit" value="Search" title="If you are feeling lazy download the first file directly(under construction)">I'm Feeling Lazy</button> -->
+		<button class="searchbutton2" type="submit" value="Search" title="If you are feeling lazy download the first file directly(under construction)">I'm Feeling Lazy</button>
 	</form>
 	<div class="searchresults">
 	<table>
+	
+	<tr>
+		<th class="td-data" style="width: 500px">Name</td>
+		<th class="td-data" style="width: 300px;" align="right">quantity available</td>
+		<th class="td-data" style="width: 100px" align="right">Price</td>
+	</tr>
 		<s:iterator value="searchresultlist">
-			<tr>
-				<td class="td-data" style="width: 500px"><s:property value="product_name" /></td>
-				<td class="td-data" style="width: 200px;" align="right"><s:property value="quantity" /></td>
-				<td class="td-data" style="width: 100px" align="right"><s:property value="cost" /></td>
-<%-- 					<span class="comment"  >&nbsp;&nbsp;&nbsp;&nbsp;<a href="comment?fileid=<s:property value="fileid" />"><img src="/buy_anything/media/images/commentsmall.png" title="View Comments"></a></span> --%>
-				</td>
-			</tr>
+		<tr>
+			<td class="td-data" style="width: 500px"><s:property value="product_name" /></td>
+			<td class="td-data" style="width: 200px;" align="right"><s:property value="quantity" /></td>
+			<td class="td-data" style="width: 100px" align="right"><s:property value="cost" /></td>
+		</tr>
 		</s:iterator>
 	</table>
 	</div>

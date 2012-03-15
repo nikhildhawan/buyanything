@@ -17,7 +17,7 @@
 <a href="displayCat" />Post Sell Advertisement</a><br/>
 <a href="buyad" />Post Buyer Advertisement</a><br/>
 <a href="searchName" />Search By Name</a><br/>
-<a href="/jsp/SearchByCost" />Search By Cost Range</a>
+<a href="searchCost" />Search By Cost Range</a>
 
 </s:form>
 
