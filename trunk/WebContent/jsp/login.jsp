@@ -7,7 +7,7 @@
 </head>
 <body>
 <s:actionerror />
-<s:form action="login.action" method="post"> <table cellspacing="10">
+<s:form action="login" method="post"> <table cellspacing="10">
 	<tr><s:textfield  name="username" key="Username" size="20" /></tr>
     <tr><s:password name="password" key="Password" size="20" /></tr>
     <tr><s:submit method="checkLogin" value="LOGIN" align="center" />
