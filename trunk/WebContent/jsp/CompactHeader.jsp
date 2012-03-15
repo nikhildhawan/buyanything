@@ -184,11 +184,11 @@
 								alt="sendmefirst" width="200" height="36" /> </a>
 						</div>
 						<div class="navbar">
-							<ul>
-<li>
-							 <a href="/buy_anything/jsp/Login.jsp">Login</a> <span class="divider"> | </span> <a
-									href="/buy_anything/jsp/Register.jsp"
-									style="margin-left: 0; padding-left: 0;">Signup</a>
+						<ul>
+							<li>
+							 <a href="/buy_anything/jsp/Login.jsp">Login</a>
+							 <span class="divider"> | </span> 
+							 <a href="/buy_anything/jsp/Register.jsp" style="margin-left: 0; padding-left: 0;">Signup</a>
 								</li>
 							</ul>
 						</div>

@@ -483,8 +483,8 @@ public void openConnection(){
 			MyLog.myCatch("/java", 217, ex);
 		}
 		activeConnections++;
-		MyLog.log("in DBDataStandAlone added new tms conn; total connections:"
-				+ activeConnections);
+		//MyLog.log("in DBDataStandAlone added new tms conn; total connections:"
+				//+ activeConnections);
 		return con;
 	}
 
