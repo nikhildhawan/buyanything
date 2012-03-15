@@ -51,7 +51,7 @@ td.label {
 	<div class="login-box">
 		<font color="red"><s:actionerror />
 		<s:fielderror /></font>
-		<s:form action="sayhello" method="post" style="margin-top:25px;">
+		<s:form action="login" method="post" style="margin-top:25px;">
 			<h1 style="margin: 0 0 15px; font-size: 24px; padding-bottom: 10px; border-bottom: 2px solid #44a62a;">Login</h1>
 			<table>
 				<tbody>
@@ -67,7 +67,7 @@ td.label {
 			</table>
 
 			<div style="margin: 0;">
-				<input type="submit" value="Login" style="padding: 2px 12px;" />
+				<input type="submit" method="checkLogin" value="Login" style="padding: 2px 12px;" />
 				<div style="float: right; padding-top: 5px; text-align: right;">
 					<a id="Forget" href="/buy_anything/jsp/ForgotPassword.jsp">Forgot password?</a><br />
 						<a id="Forget" href="/buy_anything/jsp/Register.jsp">Create an account now!</a>
