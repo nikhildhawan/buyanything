@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.JOptionPane;
+
 import model.User;
 import util.DB;
 import com.opensymphony.xwork2.ActionContext;
@@ -64,8 +66,6 @@ public class loginAction extends WebappSupport{
     	else{
     		Map session = ActionContext.getContext().getSession();
     		session.put("uname", username);
-    		session.put("uid", user_id);
-    		
     		return "success";
     	}
     }
