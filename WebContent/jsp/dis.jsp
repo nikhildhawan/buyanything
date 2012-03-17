@@ -22,8 +22,8 @@ Description :<s:property value="description"/><br>
 Cost:<s:property value="cost"/><br>
 Quantity:<s:property value="quantity"/><br>
 <br>
-<a href="buyad" />View all my advertisements</a> <br>
-<a href="buyad" /> Show potential Buyers</a>
+<a href="buyad11" />View all my advertisements</a> <br>
+<a href="buyad11" /> Show potential Buyers</a>
 <br>
 
 <%

@@ -17,14 +17,9 @@ BUYER : POST AD <br>
 <s:select name="cat_id2" list="lstCategory1" headerKey="-1" headerValue="--Select Category--"
  align="center"></s:select>
 <s:textfield name="buy_description" label="description" />
-<s:textfield name="mincost" label="mincost" />
+<s:textfield name="mincost" label="mincost"/>
 <s:textfield name="maxcost" label="maxcost"/>
 <s:submit value="Add"/>
-
-
-       
-
-
 </s:form>
 </body>
 </html>
