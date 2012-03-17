@@ -76,7 +76,12 @@
 		<result name="error">/jsp/success.jsp</result>
 		</action>
    
-    <action name="buyad11" class="doc.buyerad">
+    <action name="buyad11" class="doc.Insert2">
+		<result name="success">/jsp/disbuyad.jsp</result>
+		<result name="error">/jsp/success.jsp</result>
+		</action>
+		
+		<action name="insertAd" class="doc.Insert2">
 		<result name="success">/jsp/disbuyad.jsp</result>
 		<result name="error">/jsp/success.jsp</result>
 		</action>
