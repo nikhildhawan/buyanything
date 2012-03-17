@@ -46,6 +46,13 @@ public class DB {
 	public static DB getInstance() {
 		return db;
 	}
+	
+	public int insert(String query) throws SQLException {
+		int result = 0;
+		result = stmt.executeUpdate(query);
+		return result;
+	}
+	
 public void openConnection(){
 
 		// Register the JDBC driver for MySQL.
@@ -483,8 +490,8 @@ public void openConnection(){
 			MyLog.myCatch("/java", 217, ex);
 		}
 		activeConnections++;
-		//MyLog.log("in DBDataStandAlone added new tms conn; total connections:"
-				//+ activeConnections);
+		MyLog.log("in DBDataStandAlone added new tms conn; total connections:"
+				+ activeConnections);
 		return con;
 	}
 
