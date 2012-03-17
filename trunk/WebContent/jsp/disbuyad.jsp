@@ -16,6 +16,7 @@
 <title>Details of buyers ad</title>
 </head>
 <body bgcolor="DarkSalmon">
+<s:form action="insertAd" method="post" />
 <br>
 THE DETAILS OF ADVERTISEMENT POSTED BY YOU ARE:
 <br>
@@ -26,13 +27,9 @@ Description :<s:property value="buy_description"/><br>
 Minimum cost:<s:property value="mincost"/><br>
 Maximum cost:<s:property value="maxcost"/><br>
 
-<br>
-<a href="buyad" />View all my advertisements</a> <br>
-<a href="buyad" /> Show potential Sellers</a> <br>
-<br>
+<s:submit method="findSellers" value="Find Potential Sellers" align="left" />
 
-
-<%
+<!-- 
 
 String buy_description =request.getParameter("buy_description");
 String cat_id2=request.getParameter("cat_id2");
@@ -65,12 +62,12 @@ String queryString="insert into buy_request(category, product_name,product_descr
 			pstatement.setString(5,mincost);
 			pstatement.setString(6,maxcost);
 			updateQuery=pstatement.executeUpdate();
-			if(updateQuery !=0){ %>
+			if(updateQuery !=0){
 			<br>
 			<TABLE style="background-color : #E3E4FA;"
 			WIDTH="30%" border="1">
 			<tr><th>DATA IS INSERTED SUCCESSFULLY IN DATABASE.</th></tr>
-			</TABLE> <%
+			</TABLE>
 			} }
 		
 		catch (Exception ex){
@@ -89,10 +86,8 @@ String queryString="insert into buy_request(category, product_name,product_descr
 
 
 
-%>
 
-
-
+ -->
 
 
 </body>

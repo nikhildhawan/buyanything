@@ -5,6 +5,7 @@ import com.opensymphony.xwork2.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import util.DB;
 
 
 public class buyerad extends ActionSupport {
@@ -82,12 +83,32 @@ public class buyerad extends ActionSupport {
 		//uid=5;
 	//	uid_current=(String)session.get("uid");		
 		//String uid_current=(String)session.get("uid");
+		
+		
 		lstCategory1 = Category.getCategory(cat_id2);
-	
 		return SUCCESS;
 	}
-
-
-
+	
+	void insertBuyAd()
+	{
+		Map session = ActionContext.getContext().getSession();
+		DB db = new DB();
+		String query;
+		int flag=0;
+		query="insert into buy_request(category, product_name,product_description,user,min_cost, max_cost) values ('" + cat_id2 + "'," + " '" + buy_item + "', " + "'" + buy_description + "', "+ "'" + session.get("uid") + "', "+ "'" + mincost + "', "+ "'" + maxcost + "');";
+		
+				
+				try {
+					int result = db.insert(query);
+					if (result != 0) {
+						flag = 1;
+					}
+					System.out.print("flag=" + flag);
+				} catch (Exception e) {
+					
+					e.printStackTrace();
+				}
+	}
+	
 }
 

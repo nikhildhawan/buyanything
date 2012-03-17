@@ -15,7 +15,7 @@
 HI CLICK ON TYPE OF ADVERTISMENT TO POST
 <br>
 <br>
-<br> <a href="buyad" />POST AN AD BY BUYERS</a> 
+<br> <a href="buyad11" />POST AN AD BY BUYERS</a> 
 <br>
 <br>
 <a href="displayCat" />POST AN AD BY SELLERS</a>
