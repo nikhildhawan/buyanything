@@ -67,7 +67,7 @@ td.label {
 			</table>
 
 			<div style="margin: 0;">
-				<input type="submit" method="checkLogin" value="Login" style="padding: 2px 12px;" />
+				<input type="submit" value="Login" style="padding: 2px 12px;" />
 				<div style="float: right; padding-top: 5px; text-align: right;">
 					<a id="Forget" href="/buy_anything/jsp/ForgotPassword.jsp">Forgot password?</a><br />
 						<a id="Forget" href="/buy_anything/jsp/Register.jsp">Create an account now!</a>

@@ -186,9 +186,17 @@
 						<div class="navbar">
 						<ul>
 							<li>
+							
+							<s:if test="#session.uname!= null">
+							<a class="user" href="homepage"> <s:property value="%{#session['uname']}" /> </a> 
+							<span class="divider">| </span>
+							<a href="logout.action" style="margin-left: 0; padding-left: 0;"> Logout </a>
+							</s:if>
+							<s:else>
 							 <a href="/buy_anything/jsp/Login.jsp">Login</a>
 							 <span class="divider"> | </span> 
 							 <a href="/buy_anything/jsp/Register.jsp" style="margin-left: 0; padding-left: 0;">Signup</a>
+							 </s:else>
 								</li>
 							</ul>
 						</div>
