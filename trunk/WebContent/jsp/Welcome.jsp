@@ -6,6 +6,7 @@
 <title>Login Page</title>
 </head>
 <body>
+<s:action name='addcompactheader' executeResult='true' />
 <s:actionerror />
 <a href="home" />Home</a>
 <h2>Welcome <s:property value="#session['first_name']" />...!</h2>

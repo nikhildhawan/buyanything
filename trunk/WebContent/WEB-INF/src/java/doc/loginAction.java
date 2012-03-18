@@ -48,12 +48,13 @@ public class loginAction extends WebappSupport{
 	}
 
 	
-    public String checkLogin() {
+    public String execute() {
  
     	lstUsers=new User().verifyDetails(username,password);
-    	System.out.println(""+lstUsers);
-    	if(lstUsers.isEmpty()){
-    		addActionError(getText("error.login"));
+    	System.out.println("users : "+lstUsers);
+    	if(lstUsers.isEmpty())
+    	{
+    		addActionError("Invalid Login Details");
     		return"error";
     	}
         /*if (this.username.equals("admin")
@@ -66,6 +67,7 @@ public class loginAction extends WebappSupport{
     	else{
     		Map session = ActionContext.getContext().getSession();
     		session.put("uname", username);
+    		//System.out.println("session is being set "+session.get("uname"));
     		return "success";
     	}
     }
