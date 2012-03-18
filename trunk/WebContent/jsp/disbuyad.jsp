@@ -27,7 +27,7 @@ Description :<s:property value="buy_description"/><br>
 Minimum cost:<s:property value="mincost"/><br>
 Maximum cost:<s:property value="maxcost"/><br>
 
-<s:submit method="findSellers" value="Find Potential Sellers" align="left" />
+<a href="findPotentialSellers" />Find Sellers</a><br/>
 
 <!-- 
 
