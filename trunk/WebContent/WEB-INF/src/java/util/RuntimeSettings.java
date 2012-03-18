@@ -7,7 +7,7 @@ public class RuntimeSettings {
 	public static final String SERVER_IP = "localhost";
 	static String databaseName = "buy_anything";
 	static String dbUserID = "root";
-	static String dbPassword = "hello";
+	static String dbPassword = "passw0rd";
 	public static String RUN_MODE = "Test"; // "Test"; // "TestSMS", //
 											// "Production"; //
 	public static boolean IS_IN_DEBUG_MODE = true; // false; //
