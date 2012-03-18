@@ -90,6 +90,10 @@
 		<result name="success">/jsp/Login.jsp</result>
 		</action>
 
+		<action name="findPotentialSellers" class="doc.findPotentialSellers">
+		<result name="success">/jsp/displayPotentialSellers.jsp</result>
+		<result name="error">/jsp/Error.jsp</result>
+		</action>
 
 	</package>
 </struts>

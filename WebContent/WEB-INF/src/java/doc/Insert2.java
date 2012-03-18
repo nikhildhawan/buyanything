@@ -105,13 +105,27 @@ public class Insert2 extends ActionSupport {
 			}
 		}*/
 		String sql = "insert into buy_request(category, product_name,product_description,user,min_cost, max_cost) values ((select category_id from category where category_name = '"+ cat_id2 + "'),'" + buy_item + "','" + buy_description + "','" + uid + "','" + mincost + "','" + maxcost + "');";
+		//JOptionPane.showMessageDialog(null, sql);
+		//System.out.println(sql);
 		Connection connection = DB.getConnection();
-		int rows = DB.update(connection, sql);
+		DB.update(connection, sql);
+		//DB.clo'" + mincost + "'se(connection);
+		sql = "select buy_request_id from buy_request where category = (select category_id from category where category_name = '"+ cat_id2 + "') and product_name = '" + buy_item + "' and user = '" + uid + "' and min_cost = '" + mincost + "' and max_cost = '" + maxcost + "';";
+		//JOptionPane.showMessageDialog(null, sql);
+		ResultSet rs = DB.readFromDB(sql, connection);
+		try
+		{
+			rs.first();
+			String request_id = rs.getString("buy_request_id");
+			session.put("buy_request_id", request_id);
+			//JOptionPane.showMessageDialog(null, request_id);
+		}
+		catch(Exception ex)
+		{
+			//JOptionPane.showMessageDialog(null, "Am here");
+		}
+		//JOptionPane.showMessageDialog(null, session.get("buy_request_id"));
 		return SUCCESS;
-	}
-	public void findSellers()
-	{
-		JOptionPane.showMessageDialog(null, "Hello World");
 	}
 			}
 	
