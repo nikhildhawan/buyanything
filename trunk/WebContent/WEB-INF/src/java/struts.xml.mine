@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+
+	<package name="default" extends="struts-default" namespace="/">
+
+		<!-- <action name="login" class="com.login.action.LoginAction" method="checkLogin">
+			<result name="success">/jsp/Welcome.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action> -->
+		
+		
+        <action name="login" class="doc.loginAction" method = "checkLogin">
+            <result name="success">/jsp/Welcome.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="select" class="doc.chooseCategory">
+            <result name="success">/jsp/chooseCategory.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="chooseCategory" class="doc.chooseProduct">
+            <result name="success">/jsp/chooseProduct.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="productDetails" class="doc.displayPdt">
+            <result name="success">/jsp/details.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="searchName">
+        <result >/jsp/SearchByCategory.jsp</result>
+        </action>
+        <!--  <action name="sayhello"  class="doc.BLL_Login">
+			<result name="error">/jsp/Login.jsp</result>
+			<result name="success">/jsp/Welcome.jsp</result>
+		</action>-->
+
+		<action name="addcompactheader">
+			<result name="success">/jsp/CompactHeader.jsp</result>
+			<result name="input">/jsp/CompactHeader.jsp</result>
+		</action>
+		
+		<action name="search" class="doc.BLL_Search">
+			<result name="success">/jsp/SearchByCategory.jsp</result>
+			<result name="input">/jsp/Error.jsp</result>
+		</action>
+		
+		<action name="home">
+			<result>/jsp/Welcome.jsp</result>
+		</action>
+   
+	</package>
+</struts>
+
