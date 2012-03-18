@@ -85,6 +85,10 @@
 		<result name="success">/jsp/disbuyad.jsp</result>
 		<result name="error">/jsp/success.jsp</result>
 		</action>
+		
+		<action name="logout" class="doc.Logout">
+		<result name="success">/jsp/Login.jsp</result>
+		</action>
 
 
 	</package>
