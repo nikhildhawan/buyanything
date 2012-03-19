@@ -5,16 +5,18 @@ import java.util.Map;
 
 import model.Category;
 import util.DB;
+import vo.CategoryVo;
+
 import com.opensymphony.xwork2.ActionContext;
 
 public class chooseCategory extends WebappSupport{
 
-	private List lstCategory = new ArrayList();
+	private ArrayList<CategoryVo> lstCategory = new ArrayList<CategoryVo>();
 	
-	public List getLstCategory() {
+	public ArrayList<CategoryVo> getLstCategory() {
 		return lstCategory;
 	}
-	public void setLstCategory(List lstCategory) {
+	public void setLstCategory(ArrayList<CategoryVo> lstCategory) {
 		this.lstCategory = lstCategory;
 	}
 	

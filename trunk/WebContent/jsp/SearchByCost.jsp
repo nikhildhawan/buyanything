@@ -50,6 +50,7 @@ td.label {
 
 <div class="search-text" >
 	<form class="search-form" action="search" method="post">
+	<s:select label="Choose Category" name="cat_id" list="lstCategory" listKey="cat_id" listValue="cat_name" headerKey="-1" headerValue="--Select Category--" align="center"></s:select>
 		<label style="margin-left: 100px;margin-right: auto;width:500px;align:middle">Enter Cost Range to Search Products</label><br/>
 		<input type="hidden" name="searchby" value="cost"/>
 		<s:textfield name="mincost" label="Minimum Cost" ><s:property value="minCost" /></s:textfield>

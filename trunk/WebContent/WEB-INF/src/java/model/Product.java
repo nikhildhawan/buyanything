@@ -15,11 +15,11 @@ import com.sun.org.apache.bcel.internal.generic.LSTORE;
 public class Product {
 
 	
-	public static List getProducts(String cat){
+	public static List getProducts(int cat){
 		
 		List lstPdts = new ArrayList();
 		ResultSet resultSet = null;
-		String query = "select lsr.sell_request_id, lsr.product_name, lsr.product_description, lsr.cost, lsr.quantity, u.user_name, c.category_name from local_sell_request lsr, user u, category c where c.category_name ='"+cat+"' and lsr.seller=u.user_id and c.category_id=lsr.category";
+		String query = "select lsr.sell_request_id, lsr.product_name, lsr.product_description, lsr.cost, lsr.quantity, u.user_name, c.category_name from local_sell_request lsr, user u, category c where c.category_id ="+cat+" and lsr.seller=u.user_id and c.category_id=lsr.category";
 		System.out.println(""+query);
 		Connection connection = DB.getConnection();
 		resultSet = DB.readFromDB(query, connection);
@@ -39,6 +39,14 @@ public class Product {
 		}
 		catch(Exception e){
 			System.out.println(e);
+		}
+		finally{
+			try {
+				resultSet.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		/*Map session = ActionContext.getContext().getSession();
