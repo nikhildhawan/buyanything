@@ -27,13 +27,13 @@
 		<action name="search" class="doc.BLL_Search">
 			<result name="category">/jsp/SearchByCategory.jsp</result>
 			<result name="cost">/jsp/SearchByCost.jsp</result>
-		</action>
+		</action> 
 		
 		<action name="searchName">
         <result >/jsp/SearchByCategory.jsp</result>
         </action>
         
-        <action name="searchCost">
+        <action name="searchCost" class="doc.chooseCategory">
         <result >/jsp/SearchByCost.jsp</result>
         </action>
 		

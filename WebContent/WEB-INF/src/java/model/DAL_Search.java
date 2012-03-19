@@ -52,17 +52,17 @@ public class DAL_Search
 		return null;
 	}
 
-	public static ArrayList<Product> searchProductsByCost(int mincost,int maxcost) 
+	public static ArrayList<Product> searchProductsByCost(int cat_id,int mincost,int maxcost) 
 	{
 		ArrayList<Product> listProducts = new ArrayList<Product>();
 		String sqlQuery;
 		ResultSet rs=null;
-		sqlQuery="select * from local_sell_request where cost>="+mincost+" and cost<="+maxcost;
+		sqlQuery="select * from local_sell_request where category="+ cat_id +" and cost>="+mincost+" and cost<="+maxcost;
 		System.out.println(sqlQuery);
 		try
 		{
 			rs=Query.select(sqlQuery);
-			while(rs.next())
+			while(rs!=null && rs.next())
 			{
 				Product objPrd=new Product();
 				objPrd.product_name=rs.getString("product_name");

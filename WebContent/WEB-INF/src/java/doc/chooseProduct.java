@@ -12,23 +12,26 @@ import com.opensymphony.xwork2.ActionContext;
 
 public class chooseProduct extends WebappSupport{
 	
-	private String cat_id;
+	private int cat_id;
 	private List lstProducts = new ArrayList();
 	
 	public String execute(){
-		System.out.println(""+cat_id);
+		System.out.println("Category id choosen in choosecategory jsp and recieved in chooseproduct.java:"+cat_id);
 		Map session = ActionContext.getContext().getSession();
 		session.put("catName",cat_id);
 		lstProducts = Product.getProducts(cat_id);
 		return "success";
 
 	}
-	public String getCat_id() {
+
+	public int getCat_id() {
 		return cat_id;
 	}
-	public void setCat_id(String cat_id) {
+
+	public void setCat_id(int cat_id) {
 		this.cat_id = cat_id;
 	}
+
 	public List getLstProducts() {
 		return lstProducts;
 	}

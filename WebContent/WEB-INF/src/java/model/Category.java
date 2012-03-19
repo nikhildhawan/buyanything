@@ -8,21 +8,25 @@ import java.util.Map;
 
 import util.DB;
 import util.MyLog;
+import vo.CategoryVo;
+
 import com.opensymphony.xwork2.ActionContext;
 
 
 public class Category {
 	
-	public static List getCategory(){
-		List category = new ArrayList();
+	public static ArrayList<CategoryVo> getCategory(){
+		ArrayList<CategoryVo> category = new ArrayList<CategoryVo>();
 		ResultSet resultSet = null;
-		String query = "select category_name from category";
+		String query = "select category_id,category_name,description from category";
 		Connection connection = DB.getConnection();
 		resultSet = DB.readFromDB(query, connection);
 		
 		try{
-			while(resultSet.next()){
-				category.add(resultSet.getString("category_name"));
+			while(resultSet.next())
+			{
+				CategoryVo objcatvo=new CategoryVo(resultSet.getInt("category_id"),resultSet.getString("category_name"),resultSet.getString("description"));
+				category.add(objcatvo);
 			}
 		}
 		catch(Exception e){

@@ -10,8 +10,7 @@
 <h1 align="center"> BUY ANYTHING</h1>
 <a href="home" />Home</a>
 <s:label value ="Select Category"/>
-<s:select name="cat_id" list="lstCategory" headerKey="-1" headerValue="--Select Category--"
- align="center"></s:select>
+<s:select name="cat_id" list="lstCategory" listValue="cat_name" listKey="cat_id" headerKey="-1" headerValue="--Select Category--" align="center"></s:select>
  <s:submit value="SUBMIT"/>
 </s:form>
 </body>
