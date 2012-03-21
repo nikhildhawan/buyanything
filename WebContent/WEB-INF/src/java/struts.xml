@@ -94,6 +94,10 @@
 		<result name="success">/jsp/displayPotentialSellers.jsp</result>
 		<result name="error">/jsp/Error.jsp</result>
 		</action>
-
+		
+        <action name="buyad111" class="doc.viewMyAllAd">
+		<result name="success">/jsp/viewallad.jsp</result>
+		<result name="error">/jsp/disbuyad.jsp</result>
+		</action>
 	</package>
 </struts>
