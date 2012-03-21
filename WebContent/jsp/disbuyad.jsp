@@ -26,7 +26,7 @@ Description :<s:property value="buy_description"/><br>
 
 Minimum cost:<s:property value="mincost"/><br>
 Maximum cost:<s:property value="maxcost"/><br>
-
+<a href="buyad111" />View all my ads</a> 
 <a href="findPotentialSellers" />Find Sellers</a><br/>
 
 <!-- 
