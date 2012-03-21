@@ -15,8 +15,8 @@
 <s:form action="select.action" method="post">
 
 <a href="select" />Buy a Item</a><br/>
-<a href="displayCat" />Post Sell Advertisement</a><br/>
-<a href="buyad" />Post Buyer Advertisement</a><br/>
+<a href="/jsp/sellerad" />Post Sell Advertisement</a><br/>
+<a href="/jsp/buyerad11" />Post Buyer Advertisement</a><br/>
 <a href="searchName" />Search By Name</a><br/>
 <a href="searchCost" />Search By Cost Range</a>
 
