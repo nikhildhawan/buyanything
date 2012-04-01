@@ -6,15 +6,17 @@ create table user(user_id integer auto_increment, user_name varchar(50), passwor
 
 create table category(category_id integer auto_increment, category_name varchar(200), description varchar(200), primary key (category_id));
 
+create table subcategory(subcategory_id integer auto_increment, category integer, subcategory_name varchar(200), description varchar(200), primary key (subcategory_id), foreign key(category) references category(category_id));
+
 /*create table product(product_id integer auto_increment, product_name varchar(200), category integer, description varchar(200), primary key(product_id), foreign key(category) references category(category_id));
 
 create table buy_request(buy_request_id integer auto_increment, category integer, product integer, description varchar(200), user integer, primary key(buy_request_id), foreign key(category) references category(category_id), foreign key(user) references user(user_id), foreign key(product) references product(product_id));
 
 create table local_sell_request(sell_request_id integer auto_increment, category integer, product integer, description varchar(200), user integer, cost float, primary key(sell_request_id), foreign key(category) references category(category_id), foreign key(product) references product(product_id), foreign key(user) references user(user_id));*/
 
-create table buy_request(buy_request_id integer auto_increment, category integer, product_name varchar(200), product_description varchar(200), request_description varchar(200), user integer, min_cost float, max_cost float, primary key(buy_request_id), foreign key(category) references category(category_id), foreign key(user) references user(user_id));
+create table buy_request(buy_request_id integer auto_increment, subcategory integer, product_name varchar(200), product_description varchar(200), request_description varchar(200), user integer, min_cost float, max_cost float, primary key(buy_request_id), foreign key(subcategory) references subcategory(subcategory_id), foreign key(user) references user(user_id));
 
-create table local_sell_request(sell_request_id integer auto_increment, category integer, product_name varchar(200), product_description varchar(200), quantity integer, request_description varchar(200), seller integer, cost float, primary key(sell_request_id), foreign key(category) references category(category_id), foreign key(seller) references user(user_id));
+create table local_sell_request(sell_request_id integer auto_increment, subcategory integer, product_name varchar(200), product_description varchar(200), quantity integer, request_description varchar(200), seller integer, cost float, primary key(sell_request_id), foreign key(subcategory) references subcategory(subcategory_id), foreign key(seller) references user(user_id));
 
 create table bill(bill_id integer auto_increment, purchase_date date, primary key(bill_id));
 
